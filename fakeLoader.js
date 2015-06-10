@@ -11,7 +11,6 @@
 
         //Defaults
         var settings = $.extend({
-            timeToHide:1200, // Default Time to hide fakeLoader
             pos:'fixed',// Default Position
             top:'0px',  // Default Top value
             left:'0px', // Default Left value
@@ -86,9 +85,9 @@
         });
 
         //Time to hide fakeLoader
-        setTimeout(function(){
+        $(document).ready(function() {
             $(el).fadeOut();
-        }, settings.timeToHide);
+        });
 
         //Return Styles 
         return this.css({
